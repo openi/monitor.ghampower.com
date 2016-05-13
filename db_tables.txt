@@ -1,0 +1,102 @@
+SELECT `sn`,`name`,`email`,`password`,`level` FROM users WHERE email='$email'
+drop table users;
+create table users
+(
+	`sn` int auto_increment primary key,
+	`name` varchar(1000),
+	`email` varchar(1000),
+	`password` varchar(1000),
+	`level` int,
+	ctime bigint 
+);
+
+insert into users
+(
+	`name`,`email`,`password`,`level`
+)
+select
+	'Ghampower',
+	'admin@ghampower.com',
+	'GP#m0N!T3R',
+	1;
+	
+	
+	
+-----------------------------------------
+site_name  
+link       
+lat        
+long       
+description
+
+
+insert into site_info
+values(
+	'Ratnanagar Hospital',
+	'ratnanagar',
+	'27.6226873',      
+	'84.5176569', 
+	'<a href="ratnanagar.php">Click here</a> for Ratnanagar Hospital Site Data<br><img src="images/ratnanagar.JPG" alt="Ratnanagar" style="width:100%;height:100%;">' );
+	
+insert into site_info
+values(
+	'Maiti Nepal',
+	'maitinepal',
+	'27.7040889',      
+	'85.3450672', 
+	'Maiti Nepal Site' );
+	
+insert into site_info
+values(
+	'Lumbini General Insurance Company Limited',
+	'lgic',
+	'27.7098626',      
+	'85.3304022', 
+	'Lumbini General Insurance Company Limited' );
+	
+insert into site_info
+values(
+	'UNICEF Regional Office for South Asia',
+	'unicef',
+	'27.7170983',      
+	'85.314215', 
+	'UNICEF Regional Office for South Asia' );
+	
+insert into site_info
+values(
+	'White Lotus',
+	'whitelotus',
+	'27.7144968',      
+	'85.2781689', 
+	'<a href="whitelotus.php">Click here</a> for White Lotus Site Data<br><img src="images/whitelotus.JPG" alt="White Lotus" style="width:100%;height:100%;">' );
+	
+	
+insert into site_info
+values(
+	'Plan International',
+	'planintl',
+	'27.6821281',      
+	'85.3164638', 
+	'<a href="planintl.php">Click here</a> for Plan International Site Data' );
+	
+	
+CREATE TABLE ratnanagar (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+	
+CREATE TABLE maitinepal (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+CREATE TABLE lgic (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+CREATE TABLE unicef (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+CREATE TABLE whitelotus (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+
+CREATE TABLE planintl (`id` int auto_increment primary key,`Date` date NOT NULL, `Time` time NOT NULL, `Battery Voltage` float NOT NULL, `Solar Current` float NOT NULL,  `Inverter Current` float NOT NULL, `State of Charge` float NOT NULL, `kWh from Solar` float NOT NULL, `kWh from Grid` float NOT NULL, `kWh to Load` float NOT NULL);
+
+
+			myLatlng = new google.maps.LatLng(27.6226873,84.5176569);
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				title:"Ratnanagar Hospital"
+			});
